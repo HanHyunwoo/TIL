@@ -1,0 +1,7 @@
+https://thebook.io/006723/ch02/08/01/
+
+https://cran.r-project.org/web/views/
+
+http://cran.nexr.com/index.html
+
+https://www.rstudio.com/products/rstudio/download/#download
