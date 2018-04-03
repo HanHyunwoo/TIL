@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522750968980.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2707105759",
+    "id" : "56C3CEC0",
+    "lastKnownWriteTime" : 1522736258,
+    "last_content_update" : 1522736258,
+    "path" : "C:/TIL/R/day07/r2_friend.R",
+    "project_path" : "r2_friend.R",
+    "properties" : {
+        "cursorPosition" : "75,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

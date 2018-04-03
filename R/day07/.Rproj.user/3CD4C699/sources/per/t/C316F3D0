@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522750971757.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "346959719",
+    "id" : "C316F3D0",
+    "lastKnownWriteTime" : 1522739484,
+    "last_content_update" : 1522739484,
+    "path" : "C:/TIL/R/day07/r4_2.R",
+    "project_path" : "r4_2.R",
+    "properties" : {
+        "cursorPosition" : "35,17",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
