@@ -90,14 +90,3 @@ write_map <- function(a){
   print(p);
  dev.off()
 }
-
-
-
-
-
-
-
-
-
-
-

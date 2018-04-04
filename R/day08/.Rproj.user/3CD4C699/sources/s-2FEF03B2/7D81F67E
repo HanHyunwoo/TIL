@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522805868994.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "207681767",
+    "id" : "7D81F67E",
+    "lastKnownWriteTime" : 1522814703,
+    "last_content_update" : 1522814703573,
+    "path" : "C:/TIL/R/day08/jdbc.R",
+    "project_path" : "jdbc.R",
+    "properties" : {
+        "cursorPosition" : "15,32",
+        "scrollLine" : "1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
