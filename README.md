@@ -1,6 +1,6 @@
 
 # TIL
-Today I Learned. Daily commit.
+Today I Learned. Daily commit!
 
 
 
