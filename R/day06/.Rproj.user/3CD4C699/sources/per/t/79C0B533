@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "1210902651",
     "id" : "79C0B533",
-    "lastKnownWriteTime" : 1522663760,
-    "last_content_update" : 1522663760,
-    "path" : "C:/TIL/R/day06/r8.R",
+    "lastKnownWriteTime" : 1522890500,
+    "last_content_update" : 1522890500,
+    "path" : "~/TIL/R/day06/r8.R",
     "project_path" : "r8.R",
     "properties" : {
         "cursorPosition" : "98,0",
-        "scrollLine" : "0",
+        "scrollLine" : "32",
         "tempName" : "Untitled1"
     },
     "relative_order" : 6,
