@@ -37,7 +37,7 @@ public class MyService3 extends Service {
 
             @Override
             public void run() {
-                    sintent.putExtra("service3","cmd");
+                    sintent.putExtra("command","cmd3");
                     startActivity(sintent);
                     try {
                         Thread.sleep(500);

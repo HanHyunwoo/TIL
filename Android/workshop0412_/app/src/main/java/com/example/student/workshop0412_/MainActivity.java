@@ -34,14 +34,20 @@ public class MainActivity extends AppCompatActivity {
 
             String service3 = intent3.getStringExtra("service3");
 
+            if (command.equals("cmd")){
+                progressBar.setProgress(cnt*10);
+            }
+            imageView = findViewById(R.id.imageView);
 
-//            if (cnt %2 ==1){
-//                imageView.setImageResource(R.drawable.bg3);
-//            }else{
-//                imageView.setImageResource(R.drawable.bg4);
-//            }
-
-            progressBar.setProgress(cnt*10);
+            if (command.equals("cmd3")){
+                if (cnt %2 ==0){
+                    imageView.setImageResource(R.drawable.bg3);
+                    Toast.makeText(this, "홀수", Toast.LENGTH_SHORT).show();
+                }else{
+                    imageView.setImageResource(R.drawable.bg4);
+                    Toast.makeText(this, "짝수", Toast.LENGTH_SHORT).show();
+                }
+            }
 
         }
     }
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ll = findViewById(R.id.ll1);
+
         ll.setVisibility(View.INVISIBLE);  // 숨기기
         progressBar = findViewById(R.id.progressBar);
         progressBar.setMax(100);
