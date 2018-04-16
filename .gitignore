@@ -33,8 +33,5 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 
-# Image,log, bakup files
-*.jpg
-*.jpeg
-*.png
+# log
 *.log
