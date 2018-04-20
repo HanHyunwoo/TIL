@@ -35,27 +35,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(this, "Not Checked, ", Toast.LENGTH_SHORT).show();
+
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+            },1 );
+        } else{
+            Toast.makeText(this, "Check OK", Toast.LENGTH_SHORT).show();
+        }
+
+
         mapFragment.getMapAsync(this);
     }
 
-    public void clickBt(View v){
-        if (v.getId() == R.id.bt1){
+    public void clickBt(View v) {
+        if (v.getId() == R.id.bt1) {
             Toast.makeText(this, "현재", Toast.LENGTH_SHORT).show();
             LatLng m1 = new LatLng(37.5118295, 127.026288);
             showCurrentLocation(m1);
 
-        }else if (v.getId() == R.id.bt2){
+        } else if (v.getId() == R.id.bt2) {
             // 129.0400702  35.1152138,
             Toast.makeText(this, "부산", Toast.LENGTH_SHORT).show();
             LatLng m2 = new LatLng(35.1152138, 129.0400702);
             showCurrentLocation(m2);
 
-        }else if (v.getId() == R.id.bt3){
+        } else if (v.getId() == R.id.bt3) {
             // 126.9070116   35.1653428
             Toast.makeText(this, "광주", Toast.LENGTH_SHORT).show();
             LatLng m3 = new LatLng(35.1653428, 126.9070116);
             showCurrentLocation(m3);
-        }else{
+        } else {
             /*Location location = new Location("");
             location.setLatitude(12);
             location.setLongitude(127);
@@ -86,7 +99,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void showCurrentLocation(LatLng m) {
         mMap.addMarker(new MarkerOptions().position(m).title("Seoul in Korea"));
-
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            Toast.makeText(this, "Not Checked", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(m));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(m, 15));
 
