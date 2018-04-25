@@ -16,12 +16,10 @@ public class MainActivity extends AppCompatActivity {
     WebView webView;
     Handler handler;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         textView = findViewById(R.id.textView);
         webView = findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
@@ -29,9 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-
         handler = new Handler();
-
     }
 
     public void clickBt(View v) {
@@ -46,12 +42,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                webView.loadUrl("javascript:changeImg()");
-//            }
-//        });;
     }
 
 

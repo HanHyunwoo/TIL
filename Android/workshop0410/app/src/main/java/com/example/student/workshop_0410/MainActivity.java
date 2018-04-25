@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Handler;
 
 import java.util.Calendar;
 
@@ -17,15 +18,18 @@ public class MainActivity extends AppCompatActivity {
 
     WebView wv;
     LinearLayout ll1,ll2,ll3;
-    TextView textView;
+    TextView textView,textView2;
     EditText loginID,loginPWD ,txt_ID , txt_PWD;
     String id="";
     String pwd="";
+    Handler handler;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textView2 = findViewById(R.id.textView);
         makeui();
         timeStart();
     }
@@ -119,6 +123,40 @@ public class MainActivity extends AppCompatActivity {
             ll3.setVisibility(View.INVISIBLE);
         }
     }
+
+    public void clickBt1(View v) {
+        wv.loadUrl("http://70.12.114.143/ad/sample.html");
+            wv.setVisibility(View.VISIBLE);
+            ll1.setVisibility(View.INVISIBLE);
+            ll2.setVisibility(View.INVISIBLE);
+            ll3.setVisibility(View.INVISIBLE);
+    }
+
+    public void clickBt2(View v) {
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                wv.loadUrl("javascript:changeImg()");
+                wv.setVisibility(View.VISIBLE);
+                ll1.setVisibility(View.INVISIBLE);
+                ll2.setVisibility(View.INVISIBLE);
+                ll3.setVisibility(View.INVISIBLE);
+            }
+        });
+    }
+
+
+    final class JS{  //사용할려면 js클래스 등록을 해야 한다!
+        JS(){}
+        @android.webkit.JavascriptInterface //애플리케이션에서 정의한 메소드를 웹페이지에서 호출할 때 사용해야 함
+        public  void clickJS(String i){
+            textView2.setText(i+ "");
+            android.util.Log.d("[ js ] " , "Event Process ...." + i);
+            Toast.makeText(MainActivity.this, i + "", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
 
     public void timeStart(){
         Thread thread = new Thread() {

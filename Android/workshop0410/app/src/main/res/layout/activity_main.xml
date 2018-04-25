@@ -28,11 +28,13 @@
             android:layout_weight="1"
             android:text="TextView" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal"></LinearLayout>
+            android:text="TextView" />
+
     </LinearLayout>
 
     <FrameLayout
@@ -151,6 +153,7 @@
                         android:layout_weight="1"
                         android:onClick="clickBt"
                         android:text="로그인" />
+
 
                 </LinearLayout>
 
