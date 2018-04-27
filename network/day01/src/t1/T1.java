@@ -1,7 +1,5 @@
 package t1;
 
-
-
 class Thread1 extends Thread{
 	String msg;
 	boolean flag=true;
