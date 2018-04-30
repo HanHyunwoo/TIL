@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hw.mapper.CrimeMapper">
+	<resultMap type="crime" id="crimeResult">
+		<result column="gu" property="gu" />
+		<result column="category" property="criminal" />
+		<result column="state" property="state" />
+		<result column="occurnum" property="occurnum" />	
+	</resultMap>
+	 
+
+	<select id="selectoccur" parameterType="String" resultMap="crimeResult">
+		SELECT CATEGORY, OCCURNUM FROM criminalGu WHERE state='발생' AND gu=#{obj}
+	</select>
+	<select id="selectcatch" parameterType="String" resultMap="crimeResult">
+		SELECT CATEGORY, OCCURNUM FROM criminalGu WHERE state='검거' AND gu=#{obj}
+	</select>
+</mapper>
+
+
+
+
+
+

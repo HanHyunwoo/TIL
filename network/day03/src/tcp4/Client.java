@@ -24,8 +24,8 @@ public class Client {
 	DataOutputStream dout = null;
 
 	public Client() {
-		ip = "70.12.114.143";
-		port = 7777;
+		ip = "70.12.114.145";
+		port = 9999;
 		flag = true;
 	}
 
