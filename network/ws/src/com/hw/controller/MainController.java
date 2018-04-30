@@ -15,7 +15,8 @@ public class MainController {
    @ResponseBody
    public void main(HttpServletRequest request) {
 	   String speed = request.getParameter("speed");
-	   logger.debug(speed + ":");
+	   String temp = request.getParameter("temp");
+	   logger.debug(speed + ":" + temp);
 	   //return "main";
    }
    

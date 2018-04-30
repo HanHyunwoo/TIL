@@ -66,9 +66,14 @@ public class Server {
             if (str.equals("q") && str != null) {
                break;
             }
-            System.out.println(str);
+            
+            int partition = str.indexOf(',');
+            String speed = str.substring(0, partition).trim();
+            String temp = str.substring(partition+1, str.length()).trim();
+            
             // Send SpringServer
-            SendHttp http = new SendHttp(str);
+            System.out.println(str);
+            SendHttp http = new SendHttp(speed, temp);
             http.start();
 
          }
@@ -87,16 +92,21 @@ public class Server {
    }
    
    class SendHttp extends Thread{
-	   String msg;
+	   String temp, speed;
 	   String url;
 	   String urls = "http://127.0.0.1/ws/main.do";
-	   public SendHttp(String msg) {
-		   this.msg = msg;
+	   public SendHttp() {
 	   }
+	   
+	   public SendHttp(String speed, String temp) {
+		   this.speed = speed;
+		   this.temp = temp;
+	   }
+	   
 	   
 	   @Override
 	   public void run() {
-		   urls += "?speed=" + msg;
+		   urls += "?speed=" + speed+ "&" +"temp=" + temp;
 		   try {
 			   URL url = new URL(urls);
 			   HttpURLConnection con= (HttpURLConnection) url.openConnection();
