@@ -11,4 +11,4 @@ Today I Learned. Daily commit!
 
 
 ## 다짐
-- 멈추지 않고 가는 거북이가 되자.
+- 멈추지 않고 가는 거북이가 되자
