@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hw.mapper.LoginMapper">
+
+	
+	<update id="update" parameterType="login">
+		UPDATE LOGIN 
+		SET LOGINSTATE = #{loginstate}, CONNECTION = #{connection}, DATA = #{data}, LAT = #{lat},  LON = #{lon} 
+		WHERE ID = #{id}
+	</update>	
+		
+	<insert id="insert" parameterType="login">
+		INSERT INTO LOGIN VALUES (#{id}, 0, 0, 0, 0, 0)
+	</insert>
+	
+	<select id="select" parameterType="String" resultType = "login">
+		SELECT * FROM LOGIN WHERE ID = #{obj}
+	</select>
+	
+	<select id="selectall" resultType = "login">
+		SELECT * FROM LOGIN
+	</select>
+	
+	<select id="find" resultType = "login">
+		SELECT * FROM LOGIN WHERE LOGINSTATE = 1
+	</select>
+	
+</mapper>
+
+
+
+
+
+

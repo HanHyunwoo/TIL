@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hw.mapper.criminalMapper">
+   <resultMap type="criminal" id="criminalResult">
+      <result column="LARGE" property="LARGE"/>
+      <result column="DETAIL" property="DETAIL"/>
+      <result column="SUMALL" property="SUMALL"/>
+      <result column="SEOUL" property="SEOUL"/>
+      <result column="BUSAN" property="BUSAN"/>
+      <result column="DAEGU" property="DAEGU"/>
+      <result column="INCHEON" property="INCHEON"/>
+      <result column="GWANGJU" property="GWANGJU"/>
+      <result column="DAEJEON" property="DAEJEON"/>
+      <result column="ULSAN" property="ULSAN"/>
+      <result column="SAEJONG" property="SAEJONG"/>
+      <result column="YEAR" property="YEAR"/>
+   </resultMap>
+	
+	<select id="selectall" resultType="criminal">
+		       select A.large, ROUND((A.seoul/B.seoul*100000),5) seoul  
+			   FROM (select large_sec large, SUM(seoul) seoul, year  
+      			     FROM criminal GROUP BY large_sec, YEAR)  
+			   A JOIN population B On A.year = B.year;
+	</select>
+		
+</mapper>
+
+
+
+
+
+

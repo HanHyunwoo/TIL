@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org/DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.hw.vo.User" alias="user"/>
+		<typeAlias type="com.hw.vo.Product" alias="product"/>
+		<typeAlias type="com.hw.vo.Population" alias="Population"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="com/config/usermapper.xml"/>
+		<mapper resource="com/config/productmapper.xml"/><!-- sql들어가있는거? -->
+		<mapper resource="com/config/populationmapper.xml"/>
+	</mappers>
+</configuration>
+
+
+
+
+
+
