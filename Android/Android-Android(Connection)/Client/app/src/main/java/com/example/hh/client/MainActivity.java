@@ -51,7 +51,7 @@ class Client extends Thread {
     public Client() {
         flag = true;
         rflag = true;
-        address = "192.168.43.227";
+        address = "192.168.0.48";
         port = 9999;
 
     }

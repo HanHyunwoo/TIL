@@ -60,6 +60,7 @@ public class Server {
             String str = "";
             try {
                str = din.readUTF();
+               //throw new IOException();
             } catch (IOException e) {
                break;
             }

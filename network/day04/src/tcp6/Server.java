@@ -1,4 +1,4 @@
-package day04;
+package tcp6;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

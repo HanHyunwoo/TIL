@@ -1,4 +1,4 @@
-package day04;
+package tcp6;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -25,7 +25,7 @@ public class Client {
       //재접속을 위한 while
       while(cflag) {
          try {
-            socket = new Socket(address, 8888);
+            socket = new Socket(address, 7575);
             System.out.println("Connected Server ..");
             cflag= false;
             break;
