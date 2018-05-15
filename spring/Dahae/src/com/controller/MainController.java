@@ -11,8 +11,7 @@ import com.vo.User;
 
 @Controller
 public class MainController {
-	
-	
+
 		@Resource(name="userBiz")
 		Biz<User> biz;
 

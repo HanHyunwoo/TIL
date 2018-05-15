@@ -1,7 +1,5 @@
 package com.user;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -17,19 +15,12 @@ public class UserBiz implements Biz<User> {
 
 	@Resource(name="userDao")
 	Dao<User> dao;
-
 	
 	@Transactional
 	@Override
-	public void register(User t) {
-		
+	public void register(User t) {		
 		dao.insert(t);
-		
 	}
-	
-
-	
-
 }
 
 

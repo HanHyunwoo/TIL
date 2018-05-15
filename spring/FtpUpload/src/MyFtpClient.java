@@ -1,4 +1,4 @@
-package com.controller;
+
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import com.oroinc.net.ftp.FTPClient;
-import com.oroinc.net.ftp.FTPFile;
-import com.oroinc.net.ftp.FTPReply;
+import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPFile;
+import org.apache.commons.net.ftp.FTPReply;
 
 public class MyFtpClient {
 
