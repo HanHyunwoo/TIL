@@ -5,10 +5,13 @@ PUBLIC "-//mybatis.org/DTD Config 3.0//EN"
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.vo.Log" alias="log"/>
+		<typeAlias type="com.vo.User" alias="user"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="com/config/logmapper.xml"/>
+		<mapper resource="com/config/usermapper.xml"/>
 	</mappers>
+		
 </configuration>
 
