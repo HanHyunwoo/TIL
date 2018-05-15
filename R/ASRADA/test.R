@@ -1,6 +1,5 @@
-
-install.packages("Rserve");
-Rserve::Rserve(args = "--RS- encoding utf8")
+#install.packages("Rserve");
+#Rserve::Rserve(args = "--RS- encoding utf8")
 
 r1<-function(){
   v1<-c(1:10);
