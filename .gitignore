@@ -45,7 +45,7 @@ captures/
 *.swp
 
 # Android Patch
-gen-external-apklibs
+gen-external-as
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
@@ -197,7 +197,7 @@ vignettes/*.pdf
 .mtj.tmp/
 
 # Package Files #
-# *.jar
+lib/hive-
 *.war
 *.ear
 *.zip
