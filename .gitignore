@@ -197,7 +197,7 @@ vignettes/*.pdf
 .mtj.tmp/
 
 # Package Files #
-lib/hive-
+lib/hive-*.jar
 *.war
 *.ear
 *.zip
