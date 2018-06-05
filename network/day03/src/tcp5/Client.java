@@ -1,5 +1,12 @@
 package tcp5;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -19,11 +26,13 @@ public class Client {
 	OutputStream out = null;
 	DataOutputStream dout = null;
 
+	
 	public Client() {
 		ip = "70.12.114.143";
 		port = 9999;
 		flag = true;
 	}
+	
 
 	public void startClient() throws UnknownHostException, IOException {
 		socket = new Socket(ip, port);

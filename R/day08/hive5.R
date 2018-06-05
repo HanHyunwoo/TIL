@@ -1,6 +1,6 @@
-#install.packages('RJDBC') #모두 대문자로 써야함 
-#install.packages('DBI') #DATA BASE INTERFACE 
-#install.packages('rJAVA')
+﻿#install.packages('RJDBC') #모두 대문자로 써야함 
+#install.packages('DBI')   #DATA BASE INTERFACE 
+#install.packages('rJava')
 
 library(rJava)
 library(RJDBC)

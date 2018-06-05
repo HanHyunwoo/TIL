@@ -8,15 +8,23 @@
 	background:white;
 }
 </style>    
-<script>
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
 function display(input){
 	Highcharts.chart('container', {
 	    chart: {
 	        type: 'column'
 	    },
 	    title: {
-	        text: 'AirLine Delay Count'
+	        text: 'World\'s largest cities per 2014'
 	    },
 	    subtitle: {
 	        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
@@ -65,29 +73,24 @@ function display(input){
 $(document).ready(function(){
 	// Server에 데이터를 요청한다.
 	// AJAX로
-	$.ajax({
-		url:'chart1impl.do',
-		success:function(data){
-			alert(data);
-			display(data);
-		},
-		error:function(){
-			alert('fail');
-		}
-	});
-	
-	/* var datas = [
-		['1월',22340],
-		['2월',13121],
-		['3월',12312],
-		['4월',23121],
-		
-		]; */
-	//display(datas);
+	var datas = [
+		['지훈',70.5],
+		['다혜',90.5],
+		['용원',80.5],
+		['영무',60.5],
+		['란영',99.67],
+		['선빈',40.5],
+		['호진',50.5],
+		['유정',80.5],
+		['상우',70.5],
+		['현경',90.5]
+		];
+	display(datas);
 });
 </script>
+
 <div id="main_center">
-<h1>Chart1</h1>
+<h1>Main Center</h1>
 <div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
 
 </div>

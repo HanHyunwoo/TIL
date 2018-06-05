@@ -2,9 +2,12 @@ package com.vo;
 
 public class User {
 	/*
-	 * USERID VARCHAR(20) NOT NULL, -- 아이디 USERPW VARCHAR(20) NULL, -- 비밀번호
-	 * USERPHONE VARCHAR(20) NULL, -- 전화번호 USERBIRTH VARCHAR(20) NULL, -- 생년월일
-	 * USERADDR VARCHAR(100) NULL, -- 주소 CATE NUMBER(1) NULL -- 관리자
+	 * USERID VARCHAR(20) NOT NULL, -- 아이디 
+	 * USERPW VARCHAR(20) NULL, 	-- 비밀번호
+	 * USERPHONE VARCHAR(20) NULL,  -- 전화번호 
+	 * USERBIRTH VARCHAR(20) NULL,  -- 생년월일
+	 * USERADDR VARCHAR(100) NULL,  -- 주소 
+	 * CATE NUMBER(1) NULL 			-- 관리자
 	 */
 
 	String USERID;
