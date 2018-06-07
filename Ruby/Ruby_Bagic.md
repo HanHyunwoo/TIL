@@ -88,6 +88,42 @@ pry(main)* end
 
 
 
+### 7. Method
+
+- 대부분의 언어
+
+  - 클래스 밖  :  function
+  - 클래스 안  : method
+
+- 루비에서는 모든 function은 method
+
+- ```ruby
+  #루비에서의 method 선언
+  def simple
+      puts "simple!!"
+  end
+  
+  #루비에서의 method는 괄호를 명시적으로 하여 줄수도 있습니다.
+  def asdf()
+      puts "asdf"
+  end
+  
+  # 루비에서는 return이 없을때 마지막 연산 값을 return 합니다. 
+  def add(a,b)
+  	a + b
+  end  
+  
+  # return을 선택적을 사용할 수 있습니다. 
+  def divide(a,b)
+  	return "I don't think so" if b == 0
+  	a / b
+  end  
+  ```
+
+- 
+
+- 
+
 
 
 
