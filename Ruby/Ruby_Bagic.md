@@ -200,9 +200,9 @@ pry(main)* end
 
   ````ruby
   hash1 = { "key" => value}
-  hash2 = {:key => value, key: value}
-  hash3 = {key: value}
-  hash4 = {name: "Hyunwoo",:age => 27, "hometown" => "G2"}  
+  hash2 = { :key => value, key: value }
+  hash3 = { key: value }
+  hash4 = { name: "Hyunwoo",:age => 27, "hometown" => "G2" }  
   hash4["hometown"] => "G2"
   hash4[:name]      => "Hyunwoo"
   ````
