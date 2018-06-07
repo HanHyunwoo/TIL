@@ -161,7 +161,7 @@ pry(main)* end
   
   ```
 
-- ### String
+  ### 9. String
 
   ```ruby
   a = "안녕하세요 \n 멋사입니다."
@@ -181,15 +181,53 @@ pry(main)* end
   a = "#{name} 님 안녕하세요."                                   
   	=> "HanHyunwoo 님 안녕하세요."
   
+  %Q(hihi)  => "hihi"
+  
+  my_name = "Han Hyun Woo"
+  	=> "Han Hyun Woo"
+  my_name.upcase!   # => "HAN HYUN WOO" ,!는 안에 있는 값을 변경
+  my_name	          # => "HAN HYUN WOO"
+  
+  
+  
   ```
 
   
 
+### 10. Hash
+
+- key, value로 이루어져 있다.
+
+  ````ruby
+  hash1 = { "key" => value}
+  hash2 = {:key => value, key: value}
+  hash3 = {key: value}
+  hash4 = {name: "Hyunwoo",:age => 27, "hometown" => "G2"}  
+  hash4["hometown"] => "G2"
+  hash4[:name]      => "Hyunwoo"
+  ````
+
+  
+
+  
+
+- each 반복하기
+
+  ```ruby
+  hash4 => {:name=>"Hyunwoo", :age=>27, "hometown"=>"G2"}
+  
+  hash4.each do |k,v|
+      
+     puts "#{k} : #{v}"
+  end  
+  name : Hyunwoo
+  age : 27
+  hometown : G2 => {:name=>"Hyunwoo", :age=>27, "hometown"=>"G2"}
+  ```
 
 
 
-
-
+https://gist.github.com/nacyot/7624036
 
 
 
