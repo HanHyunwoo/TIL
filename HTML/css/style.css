@@ -1,0 +1,53 @@
+.red {
+  color: red;
+}
+
+h1 {
+  color: red;
+}
+
+#red {
+  color:  red;
+}
+
+div.red {
+  height:30px;
+  width: 30px;
+  background-color: red;
+  color: white;
+  font-size: 5px;
+}
+
+div.blue {
+  height:30px;
+  width: 30px;
+  background-color: blue;
+  font-size: 5px;
+}
+
+ /* white!important;  무조건 적용시키겠따 */
+.white {
+  color: white!important;
+}
+
+.right{
+  margin-left: auto;
+}
+
+.left{
+  margin-right: auto;
+}
+
+.f-left{
+  float: left;
+}
+
+.f-right{
+  float: right;
+}
+
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
