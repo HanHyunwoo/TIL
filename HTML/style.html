@@ -7,6 +7,7 @@
   <title>Document</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <style>
     .skyblue{
       color: skyblue;
@@ -46,12 +47,108 @@
       오른쪽에 떠있음
   </div>
 
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+    </div>
+
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-6">.col-6</div>
+  <div class="col-6">.col-6</div>
+</div>
+
+
+<!-- div.row>div.col-6.col-sm-4{.col-6.col-sm-4}*3 -->
+<div class="row">
+  <div class="col-md-4.offset-md-4">.col-md-4.offset-md-4</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+</div>
+
+
+<p>시작</p>
+<!-- 1. col : 2개,  sm : 3개,  md :4개 -->
+
+<!-- 답 : div.row>div.col-6.col-sm-4.col-md-3*4탭 -->
+<div class="row">
+  <div class="col-6 col-sm-4 col-md-3"></div>
+  <div class="col-6 col-sm-4 col-md-3"></div>
+  <div class="col-6 col-sm-4 col-md-3"></div>
+  <div class="col-6 col-sm-4 col-md-3"></div>
+</div>
+
+
+<div class="container">
+<div class="row">
+  <div class="col">col</div>
+  <div class="col">col</div>
+</div>
+
+<div class="row">
+  <div class="col-sm">sm</div>
+  <div class="col-sm">sm</div>
+  <div class="col-sm">sm</div>
+</div>
+
+<div class="row">
+  <div class="col-md">md</div>
+  <div class="col-md">md</div>
+  <div class="col-md">md</div>
+  <div class="col-md">md</div>
+</div>
+
+
+<!-- 2. (sm) offset(2칸) 1개, sm(5칸) :1개 -->
+<div class="row">
+  <div class="col-sm-2 offset-sm-5">2번</div>
+</div>
+
+
+<!-- 3. (sm) 3칸 1개로 수직, 수평 가운데 정렬  -->
+<!-- 답 : div.row.align-items-center.justify-content-center>div.col-sm-3탭 -->
+<div class="row align-items-center justify-content-center">
+  <div class="col-sm-3">3번</div>
+</div>
+
+</div>
+
+<p>끝</p>
+
+
+
+
+
+  </div>
+
+
 <img src="https://t1.daumcdn.net/cfile/tistory/202D3935500181C52B" alt="멀캠20층" />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7HMwZBytUIk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<iframe src="#content > div.hotnew > div > h2 > img" width="1000" height="1000" frameborder="0"></iframe>
+<!-- <iframe src="#content > div.hotnew > div > h2 > img" width="1000" height="1000" frameborder="0"></iframe> -->
 
   <div class="blue">
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>
