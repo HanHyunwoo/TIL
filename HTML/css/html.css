@@ -1,0 +1,38 @@
+
+#header {
+  height: 300px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrTp9KQMmkyT952D9pUH88YD7fa9urjY4nzAF238aQznTCAD_n');
+  background-size: cover;
+}
+
+.header_text{
+  height:300px;
+}
+
+.hearder > hr{
+  width: 60px;
+  border-top-width: 3px;
+  border-top: 3px solid rgba(255,255,255,0.8);
+}
+
+#about {
+  height: 300px;
+  background-color: #B1ACF1;
+}
+
+.about > hr{
+  width: 60px;
+  border-top: 3px solid rgba(0,255,0,0.8);
+}
+
+#hr_other{
+  border-top: 3px solid rgba(0,255,255,0.8);
+}
+
+#protfolio{
+  height: 300px;
+}
+
+.portfolio_text{
+  height: 300px;
+}
