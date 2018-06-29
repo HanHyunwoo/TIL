@@ -165,9 +165,6 @@ my_name.upcase! # => "OH CHANG HEE"
 my_name # => "OH CHANG HEE"
 ```
 
-https://github.com/connectediot
-https://gist.github.com/nacyot/7624036
-
 
 
 ### 11. hash
@@ -194,3 +191,4 @@ hash3 = { "key" => value }
 ### 12.추가정보
 
 - https://gist.github.com/nacyot/7624036
+
