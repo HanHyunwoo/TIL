@@ -1,0 +1,264 @@
+- 김정현 강사와 학습하는 기술
+Java,SQL,JDBC,HTML5,Servlet&JSP,SPRING
+
+Java개발환경 - JDK(Java SE SDK) - http://java.sun.com/
+Java개발툴(통합개발환경:IDE) - eclipse - http://www.eclipse.org/
+
+- Java 관련 환경변수 설정
+
+  JAVA_HOME : JDK의 홈디렉토리 --> 생성
+  PATH : JDK의 bin 디렉토리  --> 수정
+
+  echo %JAVA_HOME%
+
+ c:\여러분만의디렉토리\workspace
+
+ 프로젝트 : 개발용 디렉토리
+               Java Project, Dynamic Web Project
+               Spring Project
+
+ Java Project : JavaExam
+ API(Application Programming Interface) :
+    자주 사용되는 기능을 구현한 프로그램
+    
+ 클래스명 : FirstApp
+
+ Java, (SQL, HTML, CSS), JavaScript, | R
+ [ Java 구문 ]
+ 1. 기본구조
+ 2. 데이터 타입과 변수
+ 3. 연산자
+ 4. 제어문(조건문(if, switch), 반복문(for, while, do-while), break, contine)
+
+ 5. 배열
+ 6. OOP구문1-객체생성과관련된구문, 클래스의 구조
+ 7. OOP구문2-상속, 인터페이스, 열거형(enum)
+ 8. 예외처리
+
+ 주요API
+ 1. 데이터 타입과 변수 선언
+
+    숫자타입 - 정수데이터 - byte(1), short(2), int(4), long(8)
+                     실수데이터 - float(4), double(8) 
+    문자타입 - char(2)    
+    문자열타입 - String
+    논리타입 - boolean(1)
+
+    리터럴 - 프로그램에서 사용되는 데이터 값
+                  1, 1L, 1.0, 1.0f, '1', "1", true, false
+                  '가', '1', 'A', 'a', ''(x), 'ab'(x)
+                  "가나다", "abcdef", "XYZ", "", "123", "100" 
+
+
+   패키지명 : day1
+   클래스명 : TypeTest1
+
+   a - 0x61(97), A - 0x41(65), 1 - 0x31(49) --> ASCII
+
+   가 - 0xB0A1, 각- 0xB0A2  : 1987년 --> KSC5601
+				 EUC-KR
+                                                                 CP949(MS949)
+ 
+   변수 : 데이터값을 저장할 수 있는 메모리상의 공간
+            직접  만들어서 사용해야 한다. - 변수 선언
+
+	데이터타입 변수명;
+	데이터타입 변수명 = 초기값;
+
+	int num; char munja = '가';
+
+            방(저장장소) : l-value
+            값	: r-value
+
+            변수 = 값
+            변수 = 산술식
+            값 = 변수 (오류)
+            변수 = 변수
+            (방)    (값)
+            l-value r-value
+
+           변수 = 식(변수, 리터럴, 연산식, 리턴값이있는메소드호출식)
+
+ 이스케이프문자 : 
+       \n : 행바꿈,   \t : 탭문자
+          
+
+3. 연산자의 종류
+   - 기능
+    산술연산자, 비교연산자, 논리연산자,
+    조건연산자, 대입연산자
+   - 항(피연산자)의 개수
+    1개 - 단항연산자
+    2개 - 이항연산자
+    3개 - 삼항연산자
+   .
+   ++, --, (타입명), !, ~, -, +
+   *, /, %
+   +, - 
+   ==, !=, >, <, >=, <=, instanceof    
+   &, |
+   &&
+    ||
+   항1 ? 항2 : 항3
+   =, +=, -=, /=, *=, %=
+   int su=10;
+
+   (1) su = su + 1;
+   (2) su += 1;
+   (3) su++; ++su;
+  
+    int num =100;
+    su = num + 1;
+    su = 10;
+    (1) num = su++;   // num? 10, su? 11
+    (2) num = ++su;   // num? 11, su? 11
+
+     ++su * 5  --> 55
+     su++ * 5  --> 50
+     su = 10;
+     System.out.println(++su); 11
+     System.out.println(su++); 10
+
+    자바 연산자의 비밀
+    산술이항 연산자는 피연산자들을 최소한 int 형으로
+    변환하여 연산한다.
+    
+     float + float  	--> float
+     float + double  	--> double
+     int + int	--> int
+     long + long	--> long
+     int + long 	--> long
+     float + long	--> float	
+     char + char	--> int
+     byte + byte	--> int
+
+     double > float > long > int > short > byte
+		              >  char
+
+
+    항1 && 항2 : 논리AND, 논리곱
+            두 항이 모두 참이어야 참이되고
+            그외에는 거짓
+
+    항1 || 항2 : 논리OR, 논리합
+            두 항중에 하나라도 참이면 참
+				
+
+    항1 && 항2
+    항1 || 항2
+    식 : int 타입(byte, short, char), String 타입
+    switch(식) {  
+       case 비교값1 : 수행문장1;
+                             break;
+       case 비교값2 : 수행문장2;
+                              break;
+       case 비교값3 : 수행문장3;
+                             수행문장4;
+                              break;
+       case 비교값4 : 수행문장5;  
+                              break;
+       default : 수행문장6; 
+    }
+    switch(식) {  
+       case 비교값1 : 
+       case 비교값2 : 수행문장1;
+                             수행문장2;
+                              break;
+       case 비교값3 : 수행문장3;
+                             수행문장4;
+       case 비교값4 : 수행문장5;
+                              break;  
+       default : 수행문장6; 
+    }
+
+
+
+   for(초기식;조건식;증감식)
+
+   while(조건식)
+
+   초기식
+   while(조건식) {
+        반복문장들...
+        증감식
+   }
+
+    while(true) 
+
+    int num=10;
+
+    while(num > 10 )
+
+    while(num > 0) {
+	반복문장들...
+	//num -= 3;
+    }
+
+
+
+   - 배열 생성 방법
+   new 타입[크기]
+   new char[26]
+   new int[24]
+   new int[12]
+   new boolean[10]
+   new double[5]
+   - 배열변수 선언 방법
+   타입[ ] 변수명;
+   타입 변수명[ ];
+    char[ ] alpha;
+    int score[ ];
+    int[ ] month;
+
+  - 데이터타입마다 기본값
+     int - 0, long - 0L
+     double - 0.0, float - 0.0f
+     boolean - false
+     char - '\u0000'  --> unicode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
